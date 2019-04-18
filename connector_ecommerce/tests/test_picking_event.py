@@ -41,7 +41,7 @@ class TestPickingEvent(common.TransactionCase):
             'product_id': self.product_6.id,
             'name': "iPad Mini",
             'product_uom_qty': 42,
-            'product_uom': self.env.ref('product.product_uom_unit').id,
+            'product_uom': self.env.ref('uom.product_uom_unit').id,
             'price_unit': 65,
         })
         self.sale_line_model.create({
@@ -49,7 +49,7 @@ class TestPickingEvent(common.TransactionCase):
             'product_id': self.product_7.id,
             'name': "Apple In-Ear Headphones",
             'product_uom_qty': 2,
-            'product_uom': self.env.ref('product.product_uom_unit').id,
+            'product_uom': self.env.ref('uom.product_uom_unit').id,
             'price_unit': 405,
         })
         self.sale.action_confirm()
